@@ -17,7 +17,7 @@ body{
 .navbar{
     position: fixed;
     top: 0;
-    /* background: #cbcbcb31; */
+    background: #fff;
     width: 100%;
     height: 3rem;
     display: flex;
@@ -154,11 +154,16 @@ body{
 
 .home{
     margin-top: 3rem;
-    
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .scrollArrow{
-    position: absolute;
+    position: initial;
     width:2rem;
     top: 50%;
     left: 4%;
@@ -190,11 +195,9 @@ body{
 }
 
 .titration{
-    position: absolute;
+    position: initial;
     width:40%;
-    left: 12%;
-    top: 50%;
-    transform: translateY(-50%);
+   
 }
 
 
@@ -205,25 +208,24 @@ body{
 
 .illustration{
     
-    position: absolute;
+    position: initial;
     max-width: 400px ;
     max-height: 332px;
     background: url("../img/Humaaans.png");
     background-repeat: no-repeat;
-    width: 400px;;
+    width: 400px;
     height: 332px;
-    float: right;
-    right:7%;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-top: 1rem;
+    min-width: 300px ;
+    min-height: 232px;
+    /* transform: scale(1.25); */
+ 
 }
 
 .scrollDown{
     position:absolute;
     cursor: pointer;
     left: 50%;
-    bottom: 6%;
+    bottom: 15%;
     transform: translateX(-50%);
     animation: moveDown 1.5s  infinite ;
 }
@@ -239,29 +241,89 @@ body{
     }
     
 }
-
-.services{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-top: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-
-}
-
 .brandingSection{
     position: relative;
     width: 100%;
-    /* background: #0073b135; */
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.questionAnswers{
+.brandingVideo{
     position: relative;
-    width: 100%;
-    background: #c9ee10;
+    width: 50%;
+
 }
+
+.brandingVideo .video video{
+    width: 90%;
+    margin-left: 1%;
+}
+
+.brandingVideo .video{
+    padding: 2%;
+}
+
+.brandingText{
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brandingText p{
+    font-size: medium;
+    padding: 1%;
+}
+
+.brandingText a{
+    width: 12em;
+    text-align: center;
+    text-decoration: none;
+    color: #0072B1;
+    margin-top: 10%;
+    border: #0072B1 solid 1.5px;
+    border-radius: 5px;
+    padding:1%;
+}
+
+.serviceTitre{
+    width: 90%;
+    margin: auto;
+}
+
+.services{
+    position: relative;
+    width: 90%;
+    min-height: 100vh  ;
+    align-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10%;
+}
+
+.serviceBox{
+    border-left: black solid 3px;
+    padding: 2%;
+}
+
+.serviceBox p{
+    width: 100%;
+}
+
+.serviceBox a{
+    color: black;
+}
+
+.serviceBox a h3{
+    color: #0072B1;
+}
+
+
 
 
 @media screen and (max-width: 960px){
@@ -269,6 +331,8 @@ body{
     .navbar{
         background:#fff;
         justify-content: start;
+        width: 100vw;
+        
     }
 
     .hamburgerMenu{
@@ -282,9 +346,6 @@ body{
         justify-content: center ;
         align-items: center;
         background: #ffffff;
-    
-
-
     }
     
 
@@ -327,30 +388,93 @@ body{
     }
 
 
-
-
-
-
     .socialMedia {
         display:none;
     }
-
-    .illustration{
-        display:none;
+    .home{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 100vh;
+        margin-bottom: 10vh;
+        justify-content: start;
     }
 
-    .titration{
-        top: 40rem;
-    }
-
+    .scrollArrow,
     .scrollDown{
         display: none;
     }
 
-    .scrollArrow{
-    display: none;
-
+    .titration{
+        width: 90%;
+        text-align: center;
     }
+
+    .titration h2{
+        font-size: 1.3em;
+    }
+
+.brandingSection{
+   position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandingVideo{
+    position: relative;
+    width: 100vw;
+
+}
+
+.brandingVideo .video video{
+    width: 100vw;
+    
+    margin-left: 0%;
+}
+
+.brandingVideo .video{
+    padding: 0%;
+}
+
+.brandingText{
+    margin-top: 10vh;
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+}
+
+.brandingText p{
+    font-size: medium;
+    padding: 1%;
+    margin-bottom: 15rem;
+}
+
+.serviceTitre{
+    margin-bottom: 25vh;
+}
+
+.brandingText a{
+    display: none;
+}
+
+.services{
+    width: 90%;
+    min-height: 100vh  ;
+    align-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto ;
+    gap: 5%;
+}
+
+
+
+
+   
 
     .logo{
         width: 50%;
